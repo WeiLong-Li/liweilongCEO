@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>模拟电脑病毒效果</title>
+<script>
+  var t
+  function show(){
+	 /*window.showModalDialog("warning.html","新打开的窗口","toolbars=0, location=0, statusbars=0, menubars=0,width=250,height=250,scrollbars=1");    */
+ 	for(var i=0;i<10;i++){
+ 		window.open ('warning.html', '新打开的窗口', 'height=100, width=400, top=50,left=50, toolbar=no, menubar=no, scrollbars=no, resizable=no,location=no, status=no')
+	 t=setTimeout("show()",100);
+ 	}
+	   
+	  } 
+	  
+function stop1() {
+ clearTimeout(t);
+ alert("恭喜你，中奖了！！！"); 
+} 
+ 
+	 
+</script>
+</head>
+ 
+<body>
+<input type="button" value="病毒警告" onClick="show()">
+<input type="button" value="停止弹出" onClick="stop1()"> 
+ 
+</body>
+</html>
